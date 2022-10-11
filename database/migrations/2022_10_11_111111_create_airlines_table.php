@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Airline;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -19,6 +20,11 @@ return new class extends Migration
             $table->string('country', 30);
             $table->timestamps();
         });
+
+        Airline::create(['name'=>'DBAir', 'country'=>'Hungary']);
+        Airline::create(['name'=>'DBAir', 'country'=>'England']);
+        Airline::create(['name'=>'DBAir', 'country'=>'USA']);
+        Airline::create(['name'=>'Lalaair', 'country'=>'Canada']);
     }
 
     /**

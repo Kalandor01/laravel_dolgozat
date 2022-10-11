@@ -12,6 +12,8 @@ class Travel extends Model
     // protected $primaryKey = 'user_id';
 
     protected $fillable = [
+        'flight_id',
+        'user_id',
         'evaluation',
     ];
 }
