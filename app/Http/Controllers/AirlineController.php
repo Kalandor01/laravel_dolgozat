@@ -47,6 +47,11 @@ class AirlineController extends Controller
         $airline = Airline::find($id);
         return view("airline.edit", ["airline"=>$airline]);
     }
+    public function updateView($id)
+    {
+        $airline = Airline::find($id);
+        return view("airline.update", ["airline"=>$airline]);
+    }
     public function listView()
     {
         $airlines = Airline::all();

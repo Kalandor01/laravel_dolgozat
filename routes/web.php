@@ -26,12 +26,13 @@ Route::get("api/airlines/{id}", [AirlineController::class, "show"]);
 //POST
 Route::post("api/airlines", [AirlineController::class, "store"]);
 //PUT
-Route::put("api/airline/{id}", [AirlineController::class, "update"]);
+Route::put("api/airlines/{id}", [AirlineController::class, "update"]);
 //DELETE
-Route::delete("api/airline/{id}", [AirlineController::class, "destroy"]);
+Route::delete("api/airlines/{id}", [AirlineController::class, "destroy"]);
 //VIEWS
 Route::get("airline/new", [AirlineController::class, "newView"]);
 Route::get("airline/edit/{id}", [AirlineController::class, "editView"]);
+Route::get("airline/update/{id}", [AirlineController::class, "updateView"]);
 Route::get("airline/list", [AirlineController::class, "listView"]);
 
 
@@ -41,9 +42,9 @@ Route::get("api/flights/{id}", [FlightController::class, "show"]);
 //POST
 Route::post("api/flights", [FlightController::class, "store"]);
 //PUT
-Route::put("api/flight/{id}", [FlightController::class, "update"]);
+Route::put("api/flights/{id}", [FlightController::class, "update"]);
 //DELETE
-Route::delete("api/flight/{id}", [FlightController::class, "destroy"]);
+Route::delete("api/flights/{id}", [FlightController::class, "destroy"]);
 //VIEWS
 Route::get("flight/new", [FlightController::class, "newView"]);
 Route::get("flight/edit/{id}", [FlightController::class, "editView"]);

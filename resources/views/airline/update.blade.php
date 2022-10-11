@@ -1,24 +1,8 @@
 
-<form action="/api/tasks/{{$task->id}}" method="post">
+<form action="/api/airlines/{{$airline->airline_id}}" method="post">
     {{csrf_field()}}
-    {{method_field('PATCH')}}
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="description" placeholder="Description">
-    <select name="user_id" placeholder="User Id">
-        @foreach ($users as $user)
-            <option value="{{$user->id}}"
-            {{$user->id == $task->user_id ? 'selected': ''}}
-            >{{$user->name}}</option>
-        @endforeach
-    </select>
-    <input type="date" name="end_date" placeholder="End_date">
-    <select name="status" placeholder="Status">
-        <option value=1
-        <?php echo $task->status == 1 ? 'selected' : ''?>
-        >Open</option>
-        <option value=0
-        <?php echo $task->status == 0 ? 'selected' : ''?>
-        >Closed</option>
-    </select>
+    {{method_field('PATH')}}
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="country" placeholder="Country">
     <input type="submit" value="ok">
 </form>
