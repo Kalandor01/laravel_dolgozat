@@ -32,7 +32,7 @@ class AirlineController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $airline = new Airline($id);
+        $airline = Airline::find($id);
         $airline->name = $request->name;
         $airline->country = $request->country;
         $airline->save();
